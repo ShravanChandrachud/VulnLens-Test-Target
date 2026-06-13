@@ -6,3 +6,4 @@ function getUser(id) {
   db.query(query);
 }
 // updated Sat, Jun 13, 2026  6:21:19 PM
+const SECRET = 'hardcoded-password-123';
