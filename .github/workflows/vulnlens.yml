@@ -50,7 +50,7 @@ jobs:
           echo "scan_id: $SCAN_ID"
           echo "$CHANGED" | while IFS= read -r file; do
             if [ -f "$file" ]; then
-              aws s3 cp "$file" "s3://vulnlens-uploads-${{ secrets.NAME }}/$SCAN_ID/$file"
+              aws s3 cp "$file" "s3://vulnlens-uploads-842335676834/$SCAN_ID/$file"
               echo "uploaded: $file"
             fi
           done
