@@ -3,11 +3,6 @@ import { exec } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
-// 1. HARDCODED SECRETS
-const apiKey = "sk_live_abc123def456ghi789jkl012mno345";
-const password = "SuperSecret123!";
-const awsAccessKeyId = "AKIAIOSFODNN7EXAMPLE";
-const dbConnectionString = "mongodb://admin:password123@192.168.1.100:27017/mydb";
 
 // 2. SQL INJECTION VULNERABILITIES
 const getUserByName = (username) => {
