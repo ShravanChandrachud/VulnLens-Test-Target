@@ -3,31 +3,6 @@ import { exec } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
-
-// 2. SQL INJECTION VULNERABILITIES
-const getUserByName = (username) => {
-  const query = "SELECT * FROM users WHERE name = '" + username + "'";
-  return db.query(query);
-};
-
-const updateUser = (id, data) => {
-  const query = `UPDATE users SET name = '${data.name}' WHERE id = ${id}`;
-  return db.execute(query);
-};
-
-// 3. NOSQL INJECTION VULNERABILITIES
-const findUser = (req, res) => {
-  db.collection('users').find(req.body).toArray();
-};
-
-const findOneUser = (req, res) => {
-  db.collection('users').findOne(req.query);
-};
-
-const deleteUser = (req, res) => {
-  db.collection('users').deleteOne(req.params);
-};
-
 // 4. HARDCODED IP ADDRESSES
 const serverIp = "192.168.1.50";
 const apiEndpoint = "http://10.0.0.100:8080/api";
